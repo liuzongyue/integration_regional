@@ -45,9 +45,10 @@ import { mapMutations, mapState } from 'vuex'
 .drag_container{
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
   &>*{
-    box-sizing: border-box;
     margin: 10px;
+    flex-shrink: 0;
   }
 }
 #rectangular1,#rectangular2{

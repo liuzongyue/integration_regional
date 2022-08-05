@@ -45,4 +45,7 @@ export default {
 .dragover {
   border: 1px solid rgb(6, 245, 177);
 }
+.into_area{
+  position: relative;
+}
 </style>
