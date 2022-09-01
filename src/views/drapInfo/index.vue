@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     handleMousedown(e) {
-      e.preventDefault()
       this.isdown = true
       this.difference_num = e.pageX - e.target.offsetLeft
       const that = this
@@ -46,6 +45,7 @@ export default {
       document.addEventListener("mouseup" , () => {
         that.isdown = false
       })
+      e.stopPropagation();
     }
   },
 }
@@ -55,6 +55,12 @@ export default {
 .drap_info {
   display: flex;
   height: 100%;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
   .drap_left {
     width: 200px;
     height: 100%;
@@ -62,6 +68,8 @@ export default {
     padding: 20px 10px;
     box-sizing: border-box;
     position: relative;
+    flex-shrink: 0;
+    min-width: 165px !important;
 
     .sliding_box {
       display: inline-block;
@@ -79,7 +87,7 @@ export default {
 
   .drap_right {
     background-color: #fff;
-    flex-grow: 1;
+    box-sizing: border-box;
   }
 }
 </style>

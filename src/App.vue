@@ -16,8 +16,4 @@
   padding: 0;
   border: 0;
 }
-html,body,#app,.home{
-  width: 100%;
-  height: 100%;
-}
 </style>

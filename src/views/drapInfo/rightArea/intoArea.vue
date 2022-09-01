@@ -1,6 +1,13 @@
 <template>
-  <div class="into_area" id="takeHere">
+  <div class="right_container">
+    <header>
+      <div class="header_box">
+        <button v-for="item in 50">   容器   </button>
+      </div>
+    </header>
+    <div class="into_area" id="takeHere">
 
+    </div>
   </div>
 </template>
 
@@ -36,16 +43,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.right_container{
+  width: 100%;
+  height: 100%;
+  .header_box{
+    min-width: 200px !important;
+  }
+}
 #takeHere {
   box-sizing: border-box;
-  // border: 1px solid rgb(6, 245, 177);
   height: 100%;
 }
 
 .dragover {
   border: 1px solid rgb(6, 245, 177);
+  box-sizing:border-box;
 }
-.into_area{
+
+.into_area {
   position: relative;
+  box-sizing: border-box;
 }
 </style>
