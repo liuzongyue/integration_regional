@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="son_box">
-      <span class="drap_box" @click="GoDrapInfo">drap</span>
+      <span class="drap_box" @click="GoDrapInfo">进入</span>
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   methods: {
     GoDrapInfo() {
       this.$router.push({
-        path: '/drapInfo'
+        path: '/page-menu'
       })
     },
   },
@@ -32,6 +32,8 @@ export default {
 .home {
   position: relative;
   display: flex;
+  width: 100vw;
+  height: 100vh;
   .son_box {
     position: relative;
     top: 0%;
