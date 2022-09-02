@@ -21,7 +21,7 @@ export default {
   methods: {
     GoDrapInfo() {
       this.$router.push({
-        path: '/page-menu'
+        path: '/login'
       })
     },
   },

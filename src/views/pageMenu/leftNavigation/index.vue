@@ -59,6 +59,13 @@
               {
                 label: "组件三",
                 pathUrl: "",
+                show: false,
+                children: [
+                  {
+                    label: "组件五",
+                    pathUrl: "",
+                  },
+                ]
               },
               {
                 label: "组件四",
@@ -86,7 +93,7 @@
   box-sizing: border-box;
   border: 1px solid #cbbbbb;
   overflow: scroll;
-  padding: 0;
+  padding: 20px 0;
 }
 .menu-left::-webkit-scrollbar{
   width: 0;

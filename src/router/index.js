@@ -16,6 +16,33 @@ const routes = [
     component: () => import("./../views/drapInfo/index.vue")
   },
   {
+    path: "/login",
+    name: "login",
+    component: () => import("./../views/loginPage/index.vue")
+  },
+  {
+    path: "/task-distribution",
+    name: "taskDistribution",
+    redirect: "/task-distribution/page1",
+    children: [
+      {
+        path: "/task-distribution/page1",
+        name: "taskDistributionPage1",
+        component: () => import("./../views/taskDistribution/index.vue")
+      },
+      {
+        path: "/task-distribution/page2",
+        name: "taskDistributionPage2",
+        component: () => import("./../views/taskDistribution/index.vue")
+      },
+      {
+        path: "/task-distribution/page3",
+        name: "taskDistributionPage3",
+        component: () => import("./../views/taskDistribution/index.vue")
+      },
+    ],
+  },
+  {
     path: '/page-menu',
     name: 'pageMenu',
     component: () => import("./../views/pageMenu/index"),
