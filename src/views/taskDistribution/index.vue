@@ -23,12 +23,14 @@
   display: flex;
   min-height: 100vh;
   .LZY-menu-left{
-    width: 150px;
+    width: 15%;
     background-color: red;
+    overflow: hidden;
   }
   .LZY-main-right{
-    flex: 1;
+    width: 85%;
     background-color: rgb(236, 236, 236);
+    overflow: hidden;
   }
 }
 </style>

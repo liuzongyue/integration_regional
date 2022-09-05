@@ -1,6 +1,7 @@
 <template>
-  <div class="good-work">
+  <div class="task-manager">
     <h3 class="h3-title">任务管理</h3>
+    <div class="task-manager-main"></div>
   </div>
 </template>
 
@@ -11,10 +12,15 @@
 </script>
 
 <style lang="scss" scoped>
-.good-work{
+.task-manager{
   padding: 15px 20px;
-  .h3-title{
-
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  .task-manager-main {
+    padding: 20px 0;
+    flex: 1;
   }
 }
 </style>

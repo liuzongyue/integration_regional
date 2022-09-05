@@ -1,6 +1,6 @@
 <template>
-  <el-menu default-active="/task-distribution/page1" :router="true" class="el-menu-vertical-demo task-left-menu"
-    background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="height: 100%;">
+  <el-menu :default-active="activeUrl" :router="true" class="el-menu-vertical-demo task-left-menu"
+    background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="height: 100%; width: 100%;">
     <el-menu-item index="/task-distribution/page1">
       <i class="el-icon-menu"></i>
       <span slot="title">我的任务</span>
@@ -23,12 +23,34 @@
 
 <script>
 export default {
+  computed: {
+  },
+  beforecreated() {
+    
+  },
+  data() {
+    return {
+      activeUrl: "",
+    }
+  },
+  mounted() {
+    this.activeUrl = this.$router.path
+  },
+  watch: {
+    $route: {
+      handler: function(val) {
+        this.activeUrl = val.path
+      },
+      deep: true
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .task-left-menu {
   position: relative;
+  width: 100%;
   .icon-logo{
     position: absolute;
     top: 15px;
@@ -41,5 +63,10 @@ export default {
 }
 ul.el-menu-vertical-demo.el-menu {
   padding: 50px 0;
+}
+</style>
+<style lang="scss">
+.el-table__fixed-right::before, .el-table__fixed::before{
+  display: none;
 }
 </style>
