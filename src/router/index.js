@@ -23,22 +23,28 @@ const routes = [
   {
     path: "/task-distribution",
     name: "taskDistribution",
+    component: () => import("./../views/taskDistribution/index.vue"),
     redirect: "/task-distribution/page1",
     children: [
       {
         path: "/task-distribution/page1",
         name: "taskDistributionPage1",
-        component: () => import("./../views/taskDistribution/index.vue")
+        component: () => import("./../views/taskDistribution/taskRight/my-work.vue")
       },
       {
         path: "/task-distribution/page2",
         name: "taskDistributionPage2",
-        component: () => import("./../views/taskDistribution/index.vue")
+        component: () => import("./../views/taskDistribution/taskRight/good-work.vue")
       },
       {
         path: "/task-distribution/page3",
         name: "taskDistributionPage3",
-        component: () => import("./../views/taskDistribution/index.vue")
+        component: () => import("./../views/taskDistribution/taskRight/wait-work.vue")
+      },
+      {
+        path: "/task-distribution/page4",
+        name: "taskDistributionPage4",
+        component: () => import("./../views/taskDistribution/taskRight/task-manager.vue")
       },
     ],
   },
