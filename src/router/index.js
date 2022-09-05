@@ -34,17 +34,17 @@ const routes = [
       {
         path: "/task-distribution/page2",
         name: "taskDistributionPage2",
-        component: () => import("./../views/taskDistribution/taskRight/good-work.vue")
+        component: () => import("./../views/taskDistribution/taskRight/job-manager.vue")
       },
       {
         path: "/task-distribution/page3",
         name: "taskDistributionPage3",
-        component: () => import("./../views/taskDistribution/taskRight/wait-work.vue")
+        component: () => import("./../views/taskDistribution/taskRight/task-manager.vue")
       },
       {
         path: "/task-distribution/page4",
         name: "taskDistributionPage4",
-        component: () => import("./../views/taskDistribution/taskRight/task-manager.vue")
+        component: () => import("./../views/taskDistribution/taskRight/file-manager.vue")
       },
     ],
   },

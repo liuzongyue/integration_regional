@@ -1,21 +1,21 @@
 <template>
-  <el-menu :default-active="this.$router.path" :router="true" class="el-menu-vertical-demo task-left-menu"
+  <el-menu default-active="/task-distribution/page1" :router="true" class="el-menu-vertical-demo task-left-menu"
     background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="height: 100%;">
     <el-menu-item index="/task-distribution/page1">
       <i class="el-icon-menu"></i>
       <span slot="title">我的任务</span>
     </el-menu-item>
     <el-menu-item index="/task-distribution/page2">
-      <i class="el-icon-document"></i>
-      <span slot="title">已完成</span>
+      <i class="el-icon-setting"></i>
+      <span slot="title">职位管理</span>
     </el-menu-item>
     <el-menu-item index="/task-distribution/page3">
       <i class="el-icon-setting"></i>
-      <span slot="title">未完成</span>
+      <span slot="title">任务管理</span>
     </el-menu-item>
     <el-menu-item index="/task-distribution/page4">
-      <i class="el-icon-setting"></i>
-      <span slot="title">任务管理</span>
+      <i class="el-icon-folder"></i>
+      <span slot="title">文件管理</span>
     </el-menu-item>
     <span class="icon-logo">智能办公</span>
   </el-menu>

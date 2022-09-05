@@ -47,7 +47,7 @@ export default {
           { required: true, message: '请输入验证码', trigger: 'blur' }
         ],
       },
-      isRegistered: false, //是否注册
+      isRegistered: true, //是否注册
     }
   },
   methods: {
