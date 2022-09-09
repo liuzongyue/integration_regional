@@ -1,6 +1,6 @@
 <template>
   <el-menu :default-active="activeUrl" :router="true" class="el-menu-vertical-demo task-left-menu"
-    background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="width: 100%;">
+    background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="width: 100%; text-align: center;">
     <template v-for="(item, index) in menuList">
       <el-submenu v-if="item.children" :index="item.path">
         <template slot="title">{{item.Pname}}</template>
@@ -55,6 +55,7 @@ export default {
     font-size: 18px;
     font-weight: 700;
     color: antiquewhite;
+    white-space: nowrap !important;
   }
 }
 ul.el-menu-vertical-demo.el-menu {
