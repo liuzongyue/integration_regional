@@ -1,22 +1,15 @@
 <template>
   <el-menu :default-active="activeUrl" :router="true" class="el-menu-vertical-demo task-left-menu"
-    background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="height: 100%; width: 100%;">
-    <el-menu-item index="/task-distribution/page1">
-      <i class="el-icon-menu"></i>
-      <span slot="title">我的任务</span>
-    </el-menu-item>
-    <el-menu-item index="/task-distribution/page2">
-      <i class="el-icon-setting"></i>
-      <span slot="title">职位管理</span>
-    </el-menu-item>
-    <el-menu-item index="/task-distribution/page3">
-      <i class="el-icon-setting"></i>
-      <span slot="title">任务管理</span>
-    </el-menu-item>
-    <el-menu-item index="/task-distribution/page4">
-      <i class="el-icon-folder"></i>
-      <span slot="title">文件管理</span>
-    </el-menu-item>
+    background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" style="width: 100%;">
+    <template v-for="(item, index) in menuList">
+      <el-submenu v-if="item.children" :index="item.path">
+        <template slot="title">{{item.Pname}}</template>
+        <template v-for="(aitem, aindex) in item.children">
+          <el-menu-item :index="aitem.path">{{aitem.Pname}}</el-menu-item>
+        </template>
+      </el-submenu>
+      <el-menu-item v-else :index="item.path">{{item.Pname}}</el-menu-item>
+    </template>
     <span class="icon-logo">智能办公</span>
   </el-menu>
 </template>
@@ -28,13 +21,16 @@ export default {
   beforecreated() {
     
   },
+  props: {},
   data() {
     return {
       activeUrl: "",
+      menuList: [], //导航数组
     }
   },
   mounted() {
     this.activeUrl = this.$router.path
+    this.menuList = this.$router.options.routes[3].children
   },
   watch: {
     $route: {

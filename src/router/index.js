@@ -29,22 +29,26 @@ const routes = [
       {
         path: "/task-distribution/page1",
         name: "taskDistributionPage1",
-        component: () => import("./../views/taskDistribution/taskRight/my-work.vue")
+        component: () => import("./../views/taskDistribution/taskRight/my-work.vue"),
+        Pname: "我的任务"
       },
       {
         path: "/task-distribution/page2",
         name: "taskDistributionPage2",
-        component: () => import("./../views/taskDistribution/taskRight/job-manager.vue")
+        component: () => import("./../views/taskDistribution/taskRight/job-manager.vue"),
+        Pname: "职位管理"
       },
       {
         path: "/task-distribution/page3",
         name: "taskDistributionPage3",
-        component: () => import("./../views/taskDistribution/taskRight/task-manager.vue")
+        component: () => import("./../views/taskDistribution/taskRight/task-manager.vue"),
+        Pname: "任务管理"
       },
       {
         path: "/task-distribution/page4",
         name: "taskDistributionPage4",
-        component: () => import("./../views/taskDistribution/taskRight/file-manager.vue")
+        component: () => import("./../views/taskDistribution/taskRight/file-manager.vue"),
+        Pname: "文件管理",
       },
     ],
   },

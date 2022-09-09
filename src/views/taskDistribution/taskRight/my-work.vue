@@ -130,6 +130,7 @@ export default {
   .table-main {
     padding: 20px 0;
     flex: 1;
+    overflow: hidden;
   }
 }
 </style>
