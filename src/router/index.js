@@ -73,4 +73,9 @@ const router = new VueRouter({
   routes
 })
 
+// export default new VueRouter({
+//   mode: "history",
+//   routes
+// });
+
 export default router

@@ -28,6 +28,7 @@
 </template>
 
 <script>
+  import { login, test } from "./../../utils/apis/login"
 export default {
   data() {
     return {
@@ -68,11 +69,17 @@ export default {
     resetForm(formName) { //重置
       console.log(this.$refs[formName].model)
     },
-    goLogin() { //登录
-      console.log(this.ruleForm)
-      this.$router.push({
-        path: "/task-distribution"
-      })
+    async goLogin() { //登录
+      // console.log(this.ruleForm)
+      // this.$router.push({
+      //   path: "/task-distribution"
+      // })
+      const obj = {
+        username: "zhangsan",
+        password: "123",
+      }
+      const res = await login(obj)
+      console.log(res)
     },
   },
 }
