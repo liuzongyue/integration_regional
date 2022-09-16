@@ -71,15 +71,14 @@ export default {
     },
     async goLogin() { //登录
       // console.log(this.ruleForm)
-      // this.$router.push({
-      //   path: "/task-distribution"
-      // })
+      this.$router.push({
+        path: "/task-distribution"
+      })
       const obj = {
         username: "zhangsan",
         password: "123",
       }
-      const res = await login(obj)
-      console.log(res)
+      // const res = await login(obj)
     },
   },
 }

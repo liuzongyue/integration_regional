@@ -65,10 +65,17 @@ const routes = [
       },
     ]
   },
+  {
+    path: "/404",
+    component: () => import("@/views/error-page/404"),
+    hidden: true
+  },
+  { path: "*", redirect: "/404" } // 添加
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
