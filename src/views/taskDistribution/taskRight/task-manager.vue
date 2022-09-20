@@ -3,8 +3,8 @@
     <h3 class="h3-title">任务管理</h3>
     <div class="task-manager-main">
       <el-button class="make-task-btn" @click="createTask">{{showMakeTask ? "收起任务":"创建任务"}}</el-button>
-      <div class="task-container" v-show="showMakeTask">
-        <div class="task-list">
+      <div class="task-container">
+        <div class="task-list" ref="taskList">
           <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
             <el-form-item label="任务名称" prop="name">
               <el-input v-model="ruleForm.name"></el-input>
@@ -100,6 +100,13 @@ export default {
     },
     createTask() {
       this.showMakeTask = !this.showMakeTask
+      if(this.showMakeTask) {
+        this.$refs.taskList.style.height = this.$refs.taskList.children[0].clientHeight+ 'px'
+        this.$refs.taskList.style.opacity  = "100%"
+      }else{
+        this.$refs.taskList.style.height = 0+'px'
+        this.$refs.taskList.style.opacity  = "0%"
+      }
     },
   },
 }
@@ -124,6 +131,12 @@ export default {
 
     .task-container {
       width: 60%;
+      .task-list{
+        height: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all .3s;
+      }
     }
   }
 }
