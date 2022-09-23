@@ -11,12 +11,7 @@
             </el-select>
           </el-form-item>
           <el-form-item label="任务文件" prop="file">
-            <!-- <div>
-              <label for="inputFile" class="label_input" id="labelContanier">
-                <input type="file" id="inputFile" @change="selectFile">
-              </label>
-            </div> -->
-            <upload-file @changeFile="selectFile"></upload-file>
+            <upload-file @changeFile="selectFile" ref="uploadFileComponent"></upload-file>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm('ruleForm')">上传</el-button>
@@ -96,7 +91,8 @@ export default {
     },
   },
   mounted() {
-
+  },
+  watch: {
   },
 }
 </script>
