@@ -17,6 +17,8 @@
             label: "功能组件",
             pathUrl: "/page-menu",
             show: false,
+            icon: "el-icon-arrow-right",
+            icon_: "el-icon-arrow-down",
             children: [
               {
                 label: "组件一",
@@ -34,6 +36,8 @@
                 label: "组件四",
                 pathUrl: "",
                 show: false,
+                icon: "el-icon-arrow-right",
+                icon_: "el-icon-arrow-down",
                 children: [
                   {
                     label: "组件五",
@@ -47,6 +51,8 @@
             label: "功能组件",
             pathUrl: "/page-menu",
             show: false,
+            icon: "el-icon-arrow-right",
+            icon_: "el-icon-arrow-down",
             children: [
               {
                 label: "组件一",
@@ -60,6 +66,8 @@
                 label: "组件三",
                 pathUrl: "",
                 show: false,
+                icon: "el-icon-arrow-right",
+                icon_: "el-icon-arrow-down",
                 children: [
                   {
                     label: "组件五",
@@ -71,6 +79,8 @@
                 label: "组件四",
                 pathUrl: "",
                 show: false,
+                icon: "el-icon-arrow-right",
+                icon_: "el-icon-arrow-down",
                 children: [
                   {
                     label: "组件五",
