@@ -21,12 +21,12 @@
             icon_: "el-icon-arrow-down",
             children: [
               {
-                label: "组件一",
-                pathUrl: "",
+                label: "程序预览",
+                pathUrl: "/page-menu/code-runing",
               },
               {
                 label: "组件二",
-                pathUrl: "",
+                pathUrl: "/page-menu/page2",
               },
               {
                 label: "组件三",

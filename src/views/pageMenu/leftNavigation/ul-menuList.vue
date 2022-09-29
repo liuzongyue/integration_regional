@@ -19,19 +19,19 @@ export default {
     menuList: Array
   },
   methods: {
-    openPage(e, item) {
-      var timer = null
-      const that = this
-      return function () {
-        if (timer) {
-          clearTimeout(timer)
-          timer = null
-        }
-        timer = setTimeout(() => {
-          that.openPageFun(e, item)
-        }, 200)
-      }
-    },
+    // openPage(e, item) {
+    //   var timer = null
+    //   const that = this
+    //   return function () {
+    //     if (timer) {
+    //       clearTimeout(timer)
+    //       timer = null
+    //     }
+    //     timer = setTimeout(() => {
+    //       that.openPageFun(e, item)
+    //     }, 200)
+    //   }
+    // },
     openPage(e, item) {
       item.show = !item.show
       e.target.parentNode.style.height = "auto"
@@ -52,6 +52,11 @@ export default {
             node.style.height = 0
           })
         }
+      }
+      if(item.pathUrl && item.pathUrl.length > 0) {
+        this.$router.push({
+          path: item.pathUrl
+        })
       }
     },
     dblFun(e) {

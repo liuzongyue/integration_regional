@@ -56,12 +56,17 @@ const routes = [
     path: '/page-menu',
     name: 'pageMenu',
     component: () => import("./../views/pageMenu/index"),
-    redirect: "/page-menu/page1",
+    redirect: "/page-menu/code-runing",
     children: [
       {
-        path: "/page-menu/page1",
-        name: 'page1',
-        component: () => import("./../views/pageMenu/page1/index.vue")
+        path: "/page-menu/code-runing",
+        name: 'codeRuning',
+        component: () => import("./../views/pageMenu/code-runing/index.vue")
+      },
+      {
+        path: "/page-menu/page2",
+        name: 'page2',
+        component: () => import("./../views/pageMenu/page2/index.vue")
       },
     ]
   },
@@ -84,5 +89,10 @@ const router = new VueRouter({
 //   mode: "history",
 //   routes
 // });
+
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 export default router
